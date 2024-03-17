@@ -1,4 +1,4 @@
-package testPackage;
+package junit;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;

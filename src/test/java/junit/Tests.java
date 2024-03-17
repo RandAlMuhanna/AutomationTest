@@ -1,5 +1,6 @@
-package testPackage;
+package junit;
 
+import engine.ActionsBot;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.Configurator;
@@ -17,7 +18,8 @@ import java.time.Duration;
 public abstract class Tests {
     protected WebDriver driver;
     protected Wait<WebDriver> wait;
-    protected static Logger logger;
+    public static Logger logger;
+    public ActionsBot bot;
 
     @BeforeAll
     public static void beforeAll(){
@@ -34,7 +36,7 @@ public abstract class Tests {
 
         logger.info("Configuring 5 second explicit wait");
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
+        bot = new ActionsBot(driver, wait, logger);
     }
 
     @AfterEach

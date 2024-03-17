@@ -1,4 +1,4 @@
-package testPackage;
+package junit;
 
 public class ActionsOnWebTask {
 
