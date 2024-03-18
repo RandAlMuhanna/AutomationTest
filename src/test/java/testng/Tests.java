@@ -4,6 +4,8 @@ import engine.ActionsBot;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.Configurator;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,6 +16,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 
 public abstract class Tests {
@@ -22,10 +27,14 @@ public abstract class Tests {
     protected static Logger logger;
     protected ActionsBot bot;
 
+    protected static JSONObject testData ;
+
     @BeforeClass
-    public static void beforeClass(){
+    public static void beforeClass() throws IOException {
         Configurator.initialize(null, "src/main/resources/properties/log4j2.properties");
         logger = LogManager.getLogger(Tests.class.getName());
+       // testData = (JSONObject) new JSONParser().parse(new FileReader("/Users/randalmuhanna/IdeaProjects/testProject/src/test/resources/testData/data.json" , StandardCharsets.UTF_8));
+
     }
 
     @BeforeMethod

@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parameterization Test Suite">
+    <test name="Testing Parameterization">
+
+        <parameter name="option-mac" value="Mac"/>
+        <parameter name="option-ipad" value="iPad"/>
+        <parameter name="option-samsung" value="Samsung"/>
+
+        <classes>
+            <class name="testng.WeekFiveTasks.Assignment4"/>
+        </classes>
+    </test>
+</suite>
+
+
+
+
+
+

@@ -1,8 +1,9 @@
-package testng;
+package testng.WeekFiveTasks;
 
 import org.testng.annotations.Test;
+import testng.Tests;
 
-public class DependsOnTests extends Tests{
+public class DependsOnTests extends Tests {
 
     @Test
     public void goToFacebook(){
