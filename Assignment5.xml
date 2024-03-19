@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo suite" parallel="tests" thread-count="3">
+
+<test name="Chrome Test">
+    <parameter name="target-browser" value="chrome"/>
+    <classes>
+        <class name="testng.WeekFiveTasks.Assignment5"/>
+
+    </classes>
+</test>
+
+<test name="Firefox Test">
+    <parameter name="target-browser" value="firefox"/>
+    <classes>
+        <class name="testng.WeekFiveTasks.Assignment5"/>
+
+    </classes>
+</test>
+
+
+<test name="Safari Test">
+    <parameter name="target-browser" value="safari"/>
+    <classes>
+        <class name="testng.WeekFiveTasks.Assignment5"/>
+
+    </classes>
+</test>
+
+</suite>
